@@ -190,7 +190,7 @@ class Dungeon {
         DungeonManager.removeDungeon(this.id);
         if (DungeonManager.dungeonView === this.id) {
             BattleLog.clear();
-            openTab("dungeonsTab");
+            //openTab("dungeonsTab");
         }
         initializeSideBarDungeon();
         refreshDungeonSelect();
