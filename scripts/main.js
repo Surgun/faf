@@ -104,4 +104,9 @@ function mainLoop() {
         TownManager.purgeSlots = false;
     }
     eventChecker();
+    //autorepeat dungeons
+    DungeonManager.dungeons.filter(d=>d.type==="regular").forEach(dungeon => {
+        if (dungeon.completeState === "partyDead" && dungeon.completeState !== "abandoned") 
+            DungeonManager.repeatDungeon(dungeon.id);
+    });
 }
