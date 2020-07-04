@@ -51,13 +51,6 @@ function showDungeonReward(dungeonID) {
     else $dreRepeat.show();
     if (dungeon.dropList.length === 0) $dreCollect.html("End Run");
     else $dreCollect.html("Collect Rewards");
-    if (dungeon.type === "boss" && state === "bossBeat" || state === "abandoned"){}
-    else {
-        DungeonManager.repeatDungeon(dungeonID);
-        $dungeonSelect.hide();
-        $dungeonTeamSelect.hide();
-        $dungeonRun.show();
-    }
 }
 
 const $dreRepeat = $("#dreRepeat"); 
